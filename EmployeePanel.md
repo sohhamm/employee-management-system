@@ -26,7 +26,7 @@
     - ThThise Form will be Repeatable
     - Meaning there will be an Add Another Task Button using which the above mentioned inputs can be repeated and more tasks can be added.
     - Update Button will save the tasks in the backend (Automatically for Today's Date).
-    - If User presses fill the form again and presses update, the previous tasks will get replaced by the ewly filled tasks.
+    - If User fills the form again and presses update, the previous tasks will get replaced by the newly filled tasks (Automatically for Today's Date)..
 
 ## My Timings Page
 - A select month and year calendar must be there
