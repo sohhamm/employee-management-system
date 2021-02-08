@@ -18,7 +18,7 @@
 
 ## Update Today's Tasks Page
 - This Page Will have a form
-    - The form will have 3 inputs
+    - The form will have 4 inputs
         - Task Name
         - Task Description
         - From Time   
@@ -34,10 +34,10 @@
     - Table showing all the entries that the user made regarding all the tasks and how much time was required for executing each tasks.
     - Total Time Given this month
 
-| slno | Date Time | Task Name | Task Description | Hours Spent |
-|:----:|:---------:|-----------|------------------|-------------|
-|   1  |    abc    | task 1    | qwerty           | 1.5         |
-| 2    | abc2      | task2     | qwertyu          | 2.5         |
+| slno | Date Time | Task Name | Task Description | Hours Spent | from time | to time |
+|:----:|:---------:|-----------|------------------|-------------|-----------|---------|
+|   1  |    abc    | task 1    | qwerty           | 1.5         | 5:30 PM   | 7:00 PM |
+| 2    | abc2      | task2     | qwertyu          | 2.5         | 4:30 PM   | 7:00 PM |
 
 
 
