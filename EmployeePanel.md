@@ -1,4 +1,4 @@
-# Admin Panel
+# Employee Panel
 ## Requirements
 - Login Page
 - Landing Page
