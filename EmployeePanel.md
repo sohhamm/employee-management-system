@@ -21,7 +21,8 @@
     - The form will have 3 inputs
         - Task Name
         - Task Description
-        - Hours Required ( Max 2 hours can be written, else a alert will come to asking user to break the task to subtasks and mention each subtask's hours )   
+        - From Time   
+        - To Time ( Difference between From Time and To Time can be Max 2 hours, else a alert will come to asking user to break the task further to subtasks and mention each subtask's From Time and To Time )   
     - ThThise Form will be Repeatable
     - Meaning there will be an Add Another Task Button using which the above 3 inputs can be repeated and more tasks can be added.
     - Update Button will save the tasks in the backend (Automatically for Today's Date).
