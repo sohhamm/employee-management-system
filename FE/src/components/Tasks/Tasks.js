@@ -1,5 +1,10 @@
 import React from 'react';
+import { Form, Layout } from 'antd';
 
 export default function Tasks() {
-  return <div>HI update todays task</div>;
+  return (
+    <Layout>
+      <Form></Form>
+    </Layout>
+  );
 }

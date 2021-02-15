@@ -1,10 +1,11 @@
 import React from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Space } from 'antd';
 import { useHistory } from 'react-router-dom';
+import classes from './Home.module.css';
 
 export default function Home() {
   const { Sider, Content, Footer } = Layout;
-  const { Item } = Menu;
+  const { Item, ItemGroup } = Menu;
   const history = useHistory();
 
   const handleUpdateTasks = () => {
@@ -17,14 +18,20 @@ export default function Home() {
 
   return (
     <Layout>
-      <Menu theme="dark">
+      <Menu theme="dark" mode="horizontal">
+        <span
+          className={classes.company}
+          style={{ marginRight: '65%', marginLeft: '3%' }}
+        >
+          Humaps
+        </span>
+
         <Item onClick={handleUpdateTasks}>Update Today's Task</Item>
         <Item onClick={handleTimings}>My Timings</Item>
       </Menu>
 
       <Layout>
         <Content>main content</Content>
-        <Sider>right sidebar</Sider>
       </Layout>
       <Footer>footer</Footer>
     </Layout>
