@@ -5,13 +5,7 @@ const employeeSchema = new mongoose.Schema({
   LastName: { type: String, required: true },
   Email: { type: String, required: true, unique: true },
   Password: { type: String, required: true },
-
   EmployeeCode: { type: String, required: true },
-});
-
-employeeSchema.plugin(autoIncrement.plugin, {
-  model: 'Employee',
-  field: 'EmployeeID',
 });
 
 const Employee = mongoose.model('Employee', employeeSchema);
