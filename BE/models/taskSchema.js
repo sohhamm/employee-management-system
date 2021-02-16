@@ -2,12 +2,9 @@ import mongoose from 'mongoose';
 const { Schema, model } = mongoose;
 
 const taskSchema = new Schema({
-  EmployeeCode: String,
-  Tasks: {
-    Name: String,
-    Description: String,
-    Time: Number,
-  },
+  name: { type: String, required: true },
+  description: { type: String, required: true },
+  time: { type: Number, required: true },
 });
 
 const Task = model('Task', taskSchema);

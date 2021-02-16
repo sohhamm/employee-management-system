@@ -7,6 +7,7 @@ const employeeSchema = new Schema({
   Email: { type: String, required: true, unique: true },
   Password: { type: String, required: true },
   EmployeeCode: { type: String, required: true },
+  Tasks: [taskSchema],
 });
 
 const Employee = model('Employee', employeeSchema);
