@@ -2,20 +2,15 @@ import express from 'express';
 
 const router = express.Router();
 import Task from '../../models/taskSchema.js';
+import { getTasks } from '../../controllers/tasks.controller.js';
+import { fetchTask } from '../../middleware/fetchTask';
 
 //get all tasks
-router.get('/', async (req, res) => {
-  try {
-    const tasks = await Task.find();
-    res.json(tasks);
-  } catch (err) {
-    res.status(500).json({ message: err.message });
-  }
-});
+router.get('/', getTasks);
 
 //get one task
-router.get('/:id', getTask, (req, res) => {
-  res.send(res.task.name);
+router.get('/:id', fetchTask, (req, res) => {
+  res.send(res.task);
 });
 
 // create one task
@@ -35,7 +30,7 @@ router.post('/', async (req, res) => {
 });
 
 //update one task
-router.patch('/:id', getTask, async (req, res) => {
+router.patch('/:id', fetchTask, async (req, res) => {
   if (req.body.name != null) {
     res.task.name = req.body.name;
   }
@@ -54,7 +49,7 @@ router.patch('/:id', getTask, async (req, res) => {
 });
 
 //delete one task
-router.delete('/:id', getTask, async (req, res) => {
+router.delete('/:id', fetchTask, async (req, res) => {
   try {
     // console.log(res);
     await res.task.remove();
@@ -63,22 +58,5 @@ router.delete('/:id', getTask, async (req, res) => {
     res.status(500).json({ message: err.message });
   }
 });
-
-//middleware
-async function getTask(req, res, next) {
-  let task;
-  try {
-    task = await Task.findById(req.params.id);
-    // console.log(task);
-    if (task == null) {
-      return res.status(404).json({ message: 'Cannot find task' });
-    }
-  } catch (err) {
-    return res.status(500).json({ message: err.message });
-  }
-
-  res.task = task;
-  next();
-}
 
 export default router;
