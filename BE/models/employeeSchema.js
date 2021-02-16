@@ -1,6 +1,7 @@
 import mongoose from 'mongoose';
+const { Schema, model } = mongoose;
 
-const employeeSchema = new mongoose.Schema({
+const employeeSchema = new Schema({
   FirstName: { type: String, required: true },
   LastName: { type: String, required: true },
   Email: { type: String, required: true, unique: true },
@@ -8,5 +9,5 @@ const employeeSchema = new mongoose.Schema({
   EmployeeCode: { type: String, required: true },
 });
 
-const Employee = mongoose.model('Employee', employeeSchema);
+const Employee = model('Employee', employeeSchema);
 export default Employee;

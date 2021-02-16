@@ -3,6 +3,7 @@ import cors from 'cors';
 import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
+import taskRoutes from './routes/employeePanel/tasks.js';
 
 dotenv.config();
 const app = express();
@@ -14,6 +15,9 @@ app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
 app.use(cors());
 app.use(express.static('public'));
 app.use(express.json());
+
+//routes
+app.use('/tasks', taskRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello Humaps');

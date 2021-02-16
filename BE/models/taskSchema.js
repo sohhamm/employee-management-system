@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-const { Schema } = mongoose;
+const { Schema, model } = mongoose;
 
 const taskSchema = new Schema({
   EmployeeCode: String,
@@ -10,5 +10,5 @@ const taskSchema = new Schema({
   },
 });
 
-const Task = mongoose.model('Task', taskSchema);
+const Task = model('Task', taskSchema);
 export default Task;
