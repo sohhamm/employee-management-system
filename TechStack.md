@@ -1,7 +1,7 @@
 ## Frontend
 
 React (CRA)
-React Component Library: Ant Design
+React Component Library:
 
 ## Backend
 
