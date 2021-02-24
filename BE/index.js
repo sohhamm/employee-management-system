@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import taskRoutes from './routes/employeePanel/tasks.routes.js';
+import timingsRoutes from './routes/employeePanel/timings.routes.js';
 
 dotenv.config();
 const app = express();
@@ -34,6 +35,8 @@ mongoose.Promise = global.Promise;
 
 //routes
 app.use('/tasks', taskRoutes);
+
+app.use('/timings', timingsRoutes);
 
 app.get('/', (req, res) => {
   res.send('Hello Humaps');

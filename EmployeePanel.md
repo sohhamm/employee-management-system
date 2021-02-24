@@ -9,7 +9,7 @@
 
 ## Login Page
 
-- Shall Contain Hardcoded Username and Password from Db as sete by Admin
+- Shall Contain Hardcoded Username and Password from Db as set by Admin
 - No Register Required
 - If User Name and Password Matches, then we will be sent to Landing Page
 
